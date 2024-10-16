@@ -4,7 +4,7 @@ pipeline {
         stage('Clonar el repositorio (build)') {
             steps {
                 echo "clonando repositorio..."
-                git 'https://github.com/Uscateguito/simple-django-app'
+                git 'https://github.com/Uscateguito/simple-django-app.git'
             }
         }
         stage('Instalar dependencias (build)') {
