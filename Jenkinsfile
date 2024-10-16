@@ -10,7 +10,7 @@ pipeline {
         stage('Instalar dependencias (build)') {
             steps {
                 echo "instalando dependencias..."
-                sh 'apt install pipx'
+                sh 'apt-get install pipx'
                 sh 'pipx install -r requirements.txt'
             }
         }
