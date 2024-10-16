@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Clonar el repositorio (build)') {
-            steps {
-                echo "clonando repositorio..."
-                git 'https://github.com/Uscateguito/simple-django-app.git'
-            }
-        }
+        // stage('Clonar el repositorio (build)') {
+        //     steps {
+        //         echo "clonando repositorio..."
+        //         git 'https://github.com/Uscateguito/simple-django-app.git'
+        //     }
+        // }
         stage('Instalar dependencias (build)') {
             steps {
                 echo "instalando dependencias..."
