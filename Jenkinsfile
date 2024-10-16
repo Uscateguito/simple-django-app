@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo "instalando dependencias..."
                 // sh 'apt-get install -y pipx'
-                sh '/opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app/requirements.txt'
+                sh '/opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r requirements.txt'
             }
         }
         stage('Ejecutar pylint (test)') {
