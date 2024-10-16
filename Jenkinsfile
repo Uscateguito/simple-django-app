@@ -10,6 +10,7 @@ pipeline {
         stage('Instalar dependencias (build)') {
             steps {
                 echo "instalando dependencias..."
+                sh 'source devOps/bin/activate'
                 sh 'pip install -r requirements.txt'
             }
         }
