@@ -17,7 +17,7 @@ pipeline {
         stage('Ejecutar pylint (test)') {
             steps {
                 echo "ejecutando pylint... comprobando errores"
-                sh 'source /opt/venv/bin/activate && pylint **/*.py'
+                sh '/opt/venv/bin/python -m pylint **/*.py'
             }
         }
         stage('Desplegar con docker compose (deploy)') {
