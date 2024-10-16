@@ -10,14 +10,14 @@ pipeline {
         stage('Instalar dependencias (build)') {
             steps {
                 echo "instalando dependencias..."
-                sh 'apt-get install -y pipx'
-                sh 'pipx install -r requirements.txt'
+                // sh 'apt-get install -y pipx'
+                sh '/opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app/requirements.txt'
             }
         }
         stage('Ejecutar pylint (test)') {
             steps {
                 echo "ejecutando pylint... comprobando errores"
-                sh 'pylint **/*.py'
+                sh 'source /opt/venv/bin/activate && pylint **/*.py'
             }
         }
         stage('Desplegar con docker compose (deploy)') {
