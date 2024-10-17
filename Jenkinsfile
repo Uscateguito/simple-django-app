@@ -17,7 +17,7 @@ pipeline {
         stage('Ejecutar pylint (test)') {
             steps {
                 echo "ejecutando pylint... comprobando errores"
-                sh '/opt/venv/bin/python -m pylint ../simple-django-app || true'
+                sh '/opt/venv/bin/python -m pylint . || true'
             }
         }
         stage('Desplegar con docker compose (deploy)') {
